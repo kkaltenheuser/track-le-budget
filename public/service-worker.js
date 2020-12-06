@@ -46,13 +46,15 @@ self.addEventListener("fetch", function(event) {
     return;
   }
 
+    // upon event
   event.respondWith(
-    fetch(event.request).catch(function() {
+      fetch(event.request).catch(function () {
+        // fetch and return request
       return caches.match(event.request).then(function(response) {
         if (response) {
           return response;
         } else if (event.request.headers.get("accept").includes("text/html")) {
-          // return the cached home page for all requests for html pages
+          // return the cache match
           return caches.match("/");
         }
       });
