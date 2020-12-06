@@ -112,10 +112,10 @@ function sendTransaction(isAdding) {
       date: new Date().toISOString()
     };
   
-    // if removing funds, note it
+    // if removing funds, note it (removing by sending aka adding funds to someone else)
     if (!isAdding) {
       transaction.value *= -1;
     }
   
     // add to data
-    transactions.unshift(transaction)
+    transactions.unshift(transaction);
