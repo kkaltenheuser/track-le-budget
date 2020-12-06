@@ -156,11 +156,11 @@ function sendTransaction(isAdding) {
     amountEl.value = "";
   });
 }
-
+// addbutton, run function on onclick
 document.querySelector("#add-btn").onclick = function() {
   sendTransaction(true);
 };
-
+// subtract button, run function on onclick
 document.querySelector("#sub-btn").onclick = function() {
   sendTransaction(false);
 };
