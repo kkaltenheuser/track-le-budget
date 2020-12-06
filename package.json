@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/kkaltenheuser/track-le-budget/issues"
   },
-  "homepage": "https://github.com/kkaltenheuser/track-le-budget#readme"
+  "homepage": "https://github.com/kkaltenheuser/track-le-budget#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "lite-server": "^2.6.1",
+    "mongoose": "^5.11.4",
+    "morgan": "^1.10.0"
+  }
 }
