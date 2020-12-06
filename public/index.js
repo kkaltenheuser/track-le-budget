@@ -89,3 +89,33 @@ fetch("/api/transaction")
       }
     });
   }
+// sendTransaction function
+function sendTransaction(isAdding) {
+      // var in function
+    let nameEl = document.querySelector("#t-name");
+    let amountEl = document.querySelector("#t-amount");
+    let errorEl = document.querySelector(".form .error");
+  
+    // check form
+    if (nameEl.value === "" || amountEl.value === "") {
+      errorEl.textContent = "Missing Information";
+      return;
+    }
+    else {
+      errorEl.textContent = "";
+    }
+  
+    // create record to note name, value, and date
+    let transaction = {
+      name: nameEl.value,
+      value: amountEl.value,
+      date: new Date().toISOString()
+    };
+  
+    // if removing funds, note it
+    if (!isAdding) {
+      transaction.value *= -1;
+    }
+  
+    // add to data
+    transactions.unshift(transaction)
