@@ -1,5 +1,5 @@
 {
-  "name": "hw-wk11-cu-09-2020",
+  "name": "track-le-budget",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/kkaltenheuser/track-le-budget/issues"
   },
-  "homepage": "https://github.com/kkaltenheuser/track-le-budget#readme",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
